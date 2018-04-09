@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1">
+    <title>{{title}}</title>
+    <!-- Loading third party fonts -->
+    <link href="http://fonts.googleapis.com/css?family=Roboto:300,400,700|" rel="stylesheet" type="text/css">
+    <link href="fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+    <!-- Loading main css file -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+    
+    <style type="text/css">
+        .back-link a {
+            color: #4ca340;
+            text-decoration: none;
+            border-bottom: 1px #4ca340 solid;
+        }
+        .back-link a:hover,
+        .back-link a:focus {
+            color: #408536;
+            text-decoration: none;
+            border-bottom: 1px #408536 solid;
+        }
+        h1 {
+            height: 100%;
+            /* The html and body elements cannot have any padding or margin. */
+            
+            margin: 0;
+            font-size: 14px;
+            font-family: 'Open Sans', sans-serif;
+            font-size: 32px;
+            margin-bottom: 3px;
+        }
+        .entry-header {
+            text-align: left;
+            margin: 0 auto 50px auto;
+            width: 80%;
+            max-width: 978px;
+            position: relative;
+            z-index: 10001;
+        }
+        #demo-content {
+            padding-top: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="loader-wrapper">
+        <div id="loader"></div>
+        <div class="loader-section section-left"></div>
+        <div class="loader-section section-right"></div>
+    </div>
+    <div id="site-content">
+        <header class="site-header">
+            <div class="container">
+                <a href="index.html" id="branding">
+                    <img src="images/logo.png" alt="" class="logo">
+                    <div class="logo-copy">
+                        <h1 class="site-title">Bangladeshi Movie Database</h1>
+                        <small class="site-description"></small>
+                    </div>
+                </a>
+                <!-- #branding -->
+                <div class="main-navigation">
+                    <button type="button" class="menu-toggle"><i class="fa fa-bars"></i>
+                    </button>
+                    <ul class="menu">
+							<li class="menu-item"><a href="index.php">Home</a></li>
+							<li class="menu-item"><a href="natok.php">Natok</a></li>
+							<li class="menu-item"><a href="movie.php">Movie</a></li>
+							{{log}}
+						</ul>
+                    <!-- .menu -->
+                    <form action="search.php" class="search-form">
+							
+							<button><i class="fa fa-search"></i></button>
+						</form>
+                </div>
+                <!-- .main-navigation -->
+                <div class="mobile-navigation"></div>
+            </div>
+        </header>
+        <main class="main-content">
+            <div class="container">
+                <div class="page">
+                    <div class="breadcrumbs">
+                        <a href="index.html">Home</a>
+                        <a href="review.html">Movie</a>
+                        <span>{{title}}</span>
+                    </div>
+                    <div class="content">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <figure class="movie-poster"><img src="{{img}}" alt="#">
+                                </figure>
+                            </div>
+                            <div class="col-md-6">
+                                <h2 class="movie-title">{{title}}</h2>
+                                <div class="movie-summary">
+                                    <p>{{summary}}</p>
+                                </div>
+                                <ul class="movie-meta">
+                                    <li>
+                                        <strong>Rating:</strong>
+                                        <div class="star-rating" title="{{rating_title}}"><span style="width:{{rating_pc}}%"><strong class="rating">{{rating}}</strong> out of 5</span>
+                                        </div>
+                                    </li>
+                                    <li><strong>Length:</strong> {{length}}</li>
+                                    <li><strong>Premiere:</strong> {{premiere}} </li>
+                                    <li><strong>Category:</strong> {{category}}</li>
+                            
+                                    <li><strong>Directors:</strong> {{directors}} </li>
+                                    <li><strong>Writers:</strong> {{writers}} </li>
+                                    <li><strong>Stars:</strong> {{stars}}</li>
+                                </ul>
+                            </div>
+                            
+                        </div>
+                        <hr/>
+                            <h2><strong>Trailer and Songs:</strong></h2>
+                            <div class="album-wrap"> 
+                                
+                                {{n}}
+                                   
+                                
+                                <div class="adv small_banner"></div>
+
+                            </div>
+                               
+                            </div>
+                            <hr/><br>
+                               
+                        <div class="stars">
+								
+                          <form action="">
+                          <h2><strong>Give Your Rating:</strong></h2>
+
+                            <input class="star star-5" id="star-5" type="radio" name="star"/>
+                            <label class="star star-5" for="star-5"></label>
+
+                            <input class="star star-4" id="star-4" type="radio" name="star"/>
+                            <label class="star star-4" for="star-4"></label>
+
+                            <input class="star star-3" id="star-3" type="radio" name="star"/>
+                            <label class="star star-3" for="star-3"></label>
+
+                            <input class="star star-2" id="star-2" type="radio" name="star"/>
+                            <label class="star star-2" for="star-2"></label>
+
+                            <input class="star star-1" id="star-1" type="radio" name="star"/>
+                            <label class="star star-1" for="star-1"></label>
+
+                          </form>
+
+                        </div>
+                            </div>
+                            <hr/>
+                            <div class="article" id="titleUserReviewsTeaser">
+                                <h2>User Reviews</h2>
+                               
+                                <div class="user-comments">
+                                    {{all_reviews}}
+                                </div>
+                                
+                                <br>
+                                <a href="review.php?id={{movie_id}}">Write a review...</a>
+                            </div>
+                        <hr/>
+                    <div align="right">
+                     <form>
+                                    <input class="Mybutton" type="button" value="Buy Ticket" onclick="window.location.href='cineplex.php'" />
+                                </form>
+                    </div>
+                            <div class="entry-content">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- .container -->
+        </main>
+        <footer class="site-footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-2">
+                        <div class="widget">
+                            <h3 class="widget-title">About Us</h3>
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="widget">
+                            <h3 class="widget-title">Recent Review</h3>
+                            <ul class="no-bullet">
+                                <li><a href="#">Aynabaji</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="widget">
+                            <h3 class="widget-title">Contact Us</h3>
+                            <ul class="no-bullet">
+                                <li><a href="#">+8801703003775</a>
+                                </li>
+                                <li><a href="#">bmdb@gmail.com</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="widget">
+                            <h3 class="widget-title">Social Media</h3>
+                            <ul class="no-bullet">
+                                <li><a href="#">Facebook</a>
+                                </li>
+                                <li><a href="#">Twitter</a>
+                                </li>
+                                <li><a href="#">Google+</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- .row -->
+            </div>
+            <!-- .container -->
+        </footer>
+        </div>
+        <!-- Default snippet for navigation -->
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        <script>
+            window.jQuery || document.write('<script src="js/vendor/jquery-1.9.1.min.js"><\/script>')
+        </script>
+        <script src="js/main.js"></script>
+</body>
+
+</html>
